@@ -1,0 +1,26 @@
+pn init #Inicia o projeto
+pn i -D typescript #Instala o ts
+pn exec tsc --init #Inicia o arquivo de config do ts
+pn i -D @types/node #Instala a tipagem do ts pra node
+pn exec tsc src/server.ts #Cria um executável do server.ts
+node src/server.js #Executa
+pn i -D tsx #Instala o tsx (executa ts direto)
+pnpx tsx src/server.ts #Inicia o servidor com o tsx
+"dev": "tsx watch src/server.ts" #Script para auto restart
+pn knex -- migrate:make create-documents #Exemplo de comando knex
+
+
+-- Anotações --
+- Requisitos funcionais:
+[ ] O usuário deve poder criar uma nova transação;
+[ ] O usuário deve poder obter um resumo da sua conta;
+[ ] O usuário deve poder listar todas as transações que já ocorreram;
+[ ] O usuário deve poder visualizar uma tranzação única;
+
+- Regras de negócio:
+[ ] A transação pode ser do tipo crédito que somará ao valor total, ou débito que subtrairá;
+[ ] Deve ser possível identificarmos o usuário entre as requisições;
+[ ] O usuário só pode visualizar transações o qual ele criou;
+
+- Requisitos não funcionais:
+ 
