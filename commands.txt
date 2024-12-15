@@ -19,8 +19,19 @@ pn knex -- migrate:make create-documents #Exemplo de comando knex
 
 - Regras de negócio:
 [x] A transação pode ser do tipo crédito que somará ao valor total, ou débito que subtrairá;
-[ ] Deve ser possível identificarmos o usuário entre as requisições;
-[ ] O usuário só pode visualizar transações o qual ele criou;
+[x] Deve ser possível identificarmos o usuário entre as requisições;
+[x] O usuário só pode visualizar transações o qual ele criou;
 
 - Requisitos não funcionais:
  
+
+Testes:
+ - Unitários: unidade da sua aplicação
+ - Integração: comunicação entre duas ou mais unidades - ex: sgbd e serviço
+ - E2E (end to end, ponta a ponta): simulam um usuário operando na nossa aplicação (chamadas http, websockets)
+
+Pirâmide de testes:
+              -
+           --e2e--
+     -----integração-----
+----------unitarios----------
