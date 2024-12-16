@@ -8,6 +8,7 @@ pn i -D tsx #Instala o tsx (executa ts direto)
 pnpx tsx src/server.ts #Inicia o servidor com o tsx
 "dev": "tsx watch src/server.ts" #Script para auto restart
 pn knex -- migrate:make create-documents #Exemplo de comando knex
+pn tsc
 
 
 -- Anotações --
